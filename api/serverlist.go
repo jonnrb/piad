@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const ServerListEndpoint = "https://serverlist.piaservers.net/vpninfo/servers/new"
+const ServerListEndpoint = "https://serverlist.piaservers.net/vpninfo/servers/v6"
 
 type ServerList struct {
 	Groups  map[string][]Group `json:"groups"`
