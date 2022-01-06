@@ -19,7 +19,7 @@ type Server struct {
 func GetServers(ctx context.Context) (ServerList, error) {
 	ul, err := api.GetServerList(ctx)
 	if err != nil {
-		return nil, err
+		return nil, fmt.Errorf("error getting server list: %w", err)
 	}
 
 	gs, ok := ul.Groups["wg"]
